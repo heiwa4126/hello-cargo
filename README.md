@@ -9,8 +9,7 @@
 を使ってみた(別途インストールする必要あり。自分は aqua を使った)
 
 ```sh
-cargo run
-cargo build
+just  # cargo run
 just lint
 just fmt
 just build  # build release version

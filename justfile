@@ -1,10 +1,5 @@
-hello:
-    echo "Hello, World!"
-
-hi:
-    echo "hi" > tmp.txt
-    cat tmp.txt
-    rm tmp.txt
+default:
+    cargo run
 
 test:
     cargo test
