@@ -38,7 +38,7 @@ fn main() {
 
 ## TODO
 
-- [ ] GitHub Dependabot (今のところ依存がない)
+- [x] GitHub Dependabot (今のところ依存がない)
 - [ ] GitHub Actions でビルド&デプロイ(release に置く)
 
 ## メモ
