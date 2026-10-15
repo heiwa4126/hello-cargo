@@ -1,4 +1,4 @@
-pub(crate) fn greet() -> String {
+pub fn greet() -> String {
     "Hello, world!".to_string()
 }
 

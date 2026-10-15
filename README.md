@@ -1,4 +1,4 @@
-# hello_cargo
+# hello-cargo
 
 ブランクがあったので
 [Hello, Cargo! - The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/ch01-03-hello-cargo.html)
@@ -15,10 +15,31 @@ just fmt
 just build  # build release version
 ```
 
+## GitHub参照として利用
+
+利用するプロジェクトの`Cargo.toml`に Git 依存を追加する。
+
+```toml
+[dependencies]
+hello-cargo = { git = "https://github.com/heiwa4126/hello-cargo" }
+```
+
+Rust コードでは、パッケージ名の`-`が`_`になったクレート名で利用する。
+
+```rust
+use hello_cargo::greet;
+
+fn main() {
+	println!("{}", greet());
+}
+```
+
+特定のコミットやタグに固定する場合は、依存指定に`rev = "..."`または`tag = "..."`を追加する。
+
 ## TODO
 
 - [ ] GitHub Dependabot (今のところ依存がない)
-- [ ] GitHub Actions でビルド&デプロイ(releaseに置く)
+- [ ] GitHub Actions でビルド&デプロイ(release に置く)
 
 ## メモ
 

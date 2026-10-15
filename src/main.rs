@@ -1,5 +1,3 @@
-mod greet;
-
 fn main() {
-    println!("{}", greet::greet());
+    println!("{}", hello_cargo::greet());
 }
