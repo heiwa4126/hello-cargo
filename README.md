@@ -24,9 +24,21 @@ just build  # build release version
 hello-cargo = { git = "https://github.com/heiwa4126/hello-cargo" }
 ```
 
+`cargo add` でもOK
+
+```sh
+cargo add --git https://github.com/heiwa4126/hello-cargo.git
+# オプションとして
+#  --tag v1.0.0
+#  --branch ブランチ名
+#  --rev コミットハッシュ
+# など
+```
+
 Rust コードでは、パッケージ名の`-`が`_`になったクレート名で利用する。
 
 ```rust
+// src/main.rc
 use hello_cargo::greet;
 
 fn main() {
