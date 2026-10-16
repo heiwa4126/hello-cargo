@@ -12,3 +12,6 @@ lint:
 
 fmt:
     cargo fmt && oxfmt && just --fmt --unstable
+
+release:
+    goreleaser build --snapshot --single-target --clean
