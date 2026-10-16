@@ -46,3 +46,5 @@ rust-project.json
 tmp*.*
 *.tmp
 tmp/
+
+dist

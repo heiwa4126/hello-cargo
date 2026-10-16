@@ -48,10 +48,24 @@ fn main() {
 
 特定のコミットやタグに固定する場合は、依存指定に`rev = "..."`または`tag = "..."`を追加する。
 
+## リリース
+
+`Cargo.toml` の `version` を更新してコミットし、同じバージョンの SemVer タグを push する。
+
+```sh
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+GitHub Actions が GoReleaser を実行し、Linux / Windows の x86_64 バイナリを
+GitHub Releases に公開する。Linux は tar.gz、Windows は zip で、SHA-256 の
+`checksums.txt` も添付する。`v0.2.0-rc.1` などのタグはプレリリースになる。
+追加のシークレットや GoReleaser Pro のライセンスは不要。
+
 ## TODO
 
 - [x] GitHub Dependabot (今のところ依存がない)
-- [ ] GitHub Actions でビルド&デプロイ(release に置く)
+- [x] GitHub Actions でビルド&デプロイ(release に置く)
 
 ## メモ
 
