@@ -24,7 +24,7 @@ just build  # build release version
 hello-cargo = { git = "https://github.com/heiwa4126/hello-cargo" }
 ```
 
-`cargo add` でもOK
+`cargo add`でも OK
 
 ```sh
 cargo add --git https://github.com/heiwa4126/hello-cargo.git
@@ -50,16 +50,16 @@ fn main() {
 
 ## リリース
 
-`Cargo.toml` の `version` を更新してコミットし、同じバージョンの SemVer タグを push する。
+`Cargo.toml`の`version`を更新してコミットし、同じバージョンの SemVer タグを push する。
 
 ```sh
 git tag v0.1.0
 git push origin v0.1.0
 ```
 
-GitHub Actions が GoReleaser を実行し、Linux / Windows の x86_64 バイナリを
+GitHub Actions が GoReleaser を実行し、Linux/Windows の x86_64 バイナリを
 GitHub Releases に公開する。Linux は tar.gz、Windows は zip で、SHA-256 の
-`checksums.txt` も添付する。`v0.2.0-rc.1` などのタグはプレリリースになる。
+`checksums.txt`も添付する。`v0.2.0-rc.1`などのタグはプレリリースになる。
 追加のシークレットや GoReleaser Pro のライセンスは不要。
 
 ## TODO
