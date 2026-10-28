@@ -6,14 +6,7 @@
 
 タスクランナーに
 [just](https://github.com/casey/just)
-を使ってみた(別途インストールする必要あり。自分は aqua を使った)
-
-```sh
-just  # cargo run
-just lint
-just fmt
-just build  # build release version
-```
+を使ってみた(別途インストールする必要あり。自分は apt を使った)
 
 ## GitHub参照として利用
 
@@ -66,6 +59,18 @@ GitHub Releases に公開する。Linux は tar.gz、Windows は zip で、SHA-2
 
 - [x] GitHub Dependabot (今のところ依存がない)
 - [x] GitHub Actions でビルド&デプロイ(release に置く)
+
+## 開発
+
+```sh
+just  # cargo run
+just lint
+just fmt
+just build  # build release version
+
+just release
+# goreleaserでdist/以下にいまの OS 用のバイナリだけをコンパイルする
+```
 
 ## メモ
 
